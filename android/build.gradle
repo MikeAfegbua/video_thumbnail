@@ -24,7 +24,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-      namespace 'com.hecklr.mobile.xyz.justsoft.video_thumbnail'
+    namespace 'com.hecklr.mobile.xyz.justsoft.video_thumbnail'
     compileSdkVersion 33
 
     defaultConfig {
@@ -42,4 +42,5 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+}
 }
