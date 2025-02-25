@@ -2,13 +2,15 @@ group 'xyz.justsoft.video_thumbnail'
 version '1.0-SNAPSHOT'
 
 buildscript {
+     ext.kotlin_version = '1.8.22'
+    
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:8.1.0'
     }
 }
 
@@ -22,6 +24,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+      namespace 'com.hecklr.mobile.xyz.justsoft.video_thumbnail'
     compileSdkVersion 33
 
     defaultConfig {
@@ -30,5 +33,13 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+     compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
